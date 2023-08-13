@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/styles.css">
+	<title>Registro de ventas</title>
+</head>
+<body>
+	<!-- GENERAL CONTAINER -->
+	<div class="container">
+
+		<!-- LEFT CONTAINER-->
+		<div class="left-container">
+
+			<!-- STATISTICS-->
+			<div class="statistics">
+				<h2 class="title">Estadísticas</h2>
+				<div class="date">
+					<span id="date">07/09/2023</span>
+				</div>
+				<div class="statistics-boxes">
+					<div class="box">
+						<div class="icon">
+							<span class="material-symbols-rounded">analytics</span>
+						</div>
+						<div class="text">
+							<h3>Ventas totales</h3>
+							<span id="totalSales">0</span>
+						</div>
+					</div>
+					<div class="box">
+						<div class="icon">
+							<span class="material-symbols-rounded">stacked_line_chart</span>
+						</div>
+						<div class="text">
+							<h3>Ingresos totales</h3>
+							<span id="totalIncomes">0</span>
+						</div>
+					</div>
+					<div class="box">
+						<div class="icon">
+							<span class="material-symbols-rounded">analytics</span>
+						</div>
+						<div class="text">
+							<h3>Ventas totales</h3>
+							<span id="totalSales">0</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- REGISTER -->
+
+			<div class="register">
+				<h2 class="title">Registro</h2>
+				<div class="register-container">
+					<div class="btn-container">
+						<button id="quarterKgBtn" class=" btn activated" onclick="quarterBtnEvent()">
+							<div class="icon">
+								<span class="material-symbols-rounded">add_shopping_cart</span>
+							</div>
+							<h3>+ 1/4KG</h3>
+						</button>
+						<button id="halfKgBtn" class="btn activated" onclick="halfBtnEvent()">
+							<div class="icon">
+								<span class="material-symbols-rounded">add_shopping_cart</span>
+							</div>
+							<h3>+ 1/2KG</h3>
+						</button>
+						<button id="threeQuarterKgBtn" class="btn activated" onclick="threeQuarterBtnEvent()">
+							<div class="icon">
+								<span class="material-symbols-rounded">add_shopping_cart</span>
+							</div>
+							<h3>+ 3/4KG</h3>
+						</button>
+						<button id="kgBtn" class="btn activated" onclick="kgBtnEvent()">
+							<div class="icon">
+								<span class="material-symbols-rounded">add_shopping_cart</span>
+							</div>
+							<h3>+ 1KG</h3>
+						</button>
+					</div>
+					<div class="table">
+						<table id="registerTable">
+							<thead>
+								<tr>
+									<th>HORA</th>
+									<th>ID</th>
+									<th>PRODUCTO</th>
+									<th>PRECIO</th>
+								</tr>
+							</thead>
+							<tbody id="tableBody"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right-container">
+
+		</div>
+	</div>
+
+	<script src="./js/functions.js"></script>
+	<script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+/* ROOT VARIABLES */
+
+:root {
+    --primary-color: #60a674;
+    --white: #f1f1f1;
+    --secondary-white: #ffffff;
+    --black: #151515;
+    --gray: #51534e;
+    --light-gray: #c7c7c7;
+    --text-color: #363949;
+    --bg-color: #ebf5fc;
+    --tertiary-color: #e4edf3;
+    --secondary-color: #d3dce2;
+
+    --h2-size: 2rem;
+    --h3-size: 1rem;
+    --font-family: "Poppins", sans-serif;
+
+    --box-shadow: 0 2rem 3rem var(--shadow-color);
+}
+html {
+    font-size: 16px;
+}
+
+/* GENERAL STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+body {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    padding: 2rem 0;
+}
+.container {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    gap: 1.2rem;
+}
+.title {
+    font-size: var(--h2-size);
+    color: var(--text-color);
+    font-weight: 900;
+}
+.btn {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.disabled {
+    border: none;
+    background-color: var(--tertiary-color) !important;
+    box-shadow: -2px -2px 10px inset rgb(255, 255, 255),
+        3px 3px 5px inset rgba(0, 0, 0, 0.15);
+}
+.disabled span {
+    color: var(--light-gray);
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+}
+.disabled h3 {
+    font-size: 1.2rem;
+    color: var(--light-gray);
+    transition: all 0.3s ease;
+}
+
+/* STATISTICS */
+
+.left-container {
+    width: 80%;
+}
+.left-container .statistics {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.statistics .date span {
+    display: inline-block;
+    background-color: var(--tertiary-color);
+    box-shadow: -2px -2px 10px rgb(255, 255, 255),
+        3px 3px 5px rgba(0, 0, 0, 0.15);
+    padding: 0.3rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.statistics .statistics-boxes {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.statistics-boxes .box {
+    background-color: var(--tertiary-color);
+    box-shadow: -2px -2px 10px rgb(255, 255, 255),
+        3px 3px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    padding: 1.8rem;
+    transition: all 0.3s ease;
+}
+.box .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+.box .text {
+    color: var(--text-color);
+}
+.box .text h3 {
+    font-size: var(--h3-size);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.box .text span {
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+/* REGISTER */
+
+.left-container .register-container {
+    width: 100%;
+    background-color: var(--tertiary-color);
+    box-shadow: -2px -2px 10px rgb(255, 255, 255),
+        3px 3px 5px rgba(0, 0, 0, 0.15);
+    padding: 1.8rem;
+    border-radius: 1rem;
+    margin: 1.4rem 0;
+}
+.register .btn-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.btn-container > .activated {
+    background: var(--tertiary-color);
+    box-shadow: -2px -2px 5px rgb(255, 255, 255),
+        3px 3px 5px rgba(0, 0, 0, 0.15);
+    border: none;
+}
+.btn-container > .activated span {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+}
+.btn-container > .activated h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+.btn-container > .activated:hover .icon span {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+.btn-container > .btn-activated:hover h3 {
+    color: var(--primary-color);
+}
+
+/* TABLE STYLES */
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    color: var(--text-color);
+    border-radius: 1rem;
+    box-shadow: -2px -2px 5px rgb(255, 255, 255),
+        3px 3px 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.table table th,
+.table table td {
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+    /* border: 1px solid var(--text-color); */
+}
+.table table > thead {
+    background-color: var(--tertiary-color);
+}
+
+/* tbody > tr:nth-child(even) {
+    background-color: var(--light-gray);
+} */
+
+/* Estilo para filas impares */
+tbody > tr:nth-child(odd) {
+    background-color: var(--secondary-color);
+}
